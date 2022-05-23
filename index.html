@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>AMA - Poços Saudáveis</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        #multi-bg{
+          /*height: 300px;*/
+          /*display: block;*/
+          /*background-color: #808;*/
+          background-image:
+             url("./imgs/wave.svg"),
+             url("./imgs/wave1.svg"),         
+             url("./imgs/wave2.svg");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-attachment: fixed;
+          background-position: center bottom; 
+    </style>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+  </head>
+<body>
+    
+<header>
+
+  <div class="collapse" id="navbarHeader" style="background-color: #368bb5;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="font-weight-bold">Sobre</h4>
+          <p class="text-white"><em>Projeto desenvolvido como ação do Núcleo de Extensão e Prática e Profissional (NEPP) do IFRN - Campus Macau. Informações são disponibilizadas para a população de Macau acerca da importância da avaliação da qualidade dos corpos hídricos e do consumo consciente da água de abastecimento humano como medida de promoção a saúde.</em></p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="font-weight-bold">Contato</h4>
+          <ul class="list-unstyled">
+            <li>
+                <img src="./imgs/instagram.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <a href="https://www.instagram.com/ama_pocossaudaveis_nepp.mc/" class="text-white">
+                  Siga-nos no Instagram
+                </a>
+              </li>
+            <li>
+                <img src="./imgs/email.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <a href="mailto:ama.pocossaudaveis@ifrn.edu.br" class="text-white">
+                  Enviar e-mail
+                </a>
+            </li>
+            <li>
+                <img src="./imgs/admin.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <a href="#" class="text-white">
+                  Login
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark shadow-sm" style="background-color: #246084;">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center fw-bold">
+        AMA - Poços Saudáveis
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- style="background-image: linear-gradient(white, white, white, #9dc2d1);" -->
+  <section class="text-center container">
+    <div class="row pt-5 mb-5 d-flex justify-content-center align-items-center">
+      <div class="col">
+        <img src="./imgs/AMA2.png" style="width: 350px;" class="pb-3">
+      </div>
+      <!-- d-flex justify-content-center align-items-center -->
+      <div class="col text-center">
+        <h1 class="fw-normal">Análise Microbiológica da Água</h1>
+        <p class="lead text-muted">Verifique aqui a avaliação da qualidade microbiológica das águas utilizadas para o consumo humano pela população de Macau-RN.</p>
+        <p>
+          <a class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#mapa" role="button" aria-expanded="false" aria-controls="mapa">Visualizar poços</a>
+          <a class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#poco" role="button" aria-expanded="false" aria-controls="poco">Pesquisar poços</a>
+        </p>
+      </div>
+
+      <!-- Mapa -->
+      <div class="container collapse pb-3" id="mapa">
+        <div class="card card-body">
+          <div class="row">
+              <h1 class="fw-normal mb-3">Clique nas marcações do mapa para obter informações.</h1>
+              <div class="row d-flex justify-content-center">
+                  <div class="col">
+                      <img src="./imgs/pocos_s.png" alt="" width="30">
+                      <p class="lead px-1">Poços Saudáveis</p>
+                  </div>   
+                  <div class="col">
+                      <img src="./imgs/pocos_c.png" alt="" width="30">
+                      <p class="lead px-1">Poços Contaminados</p>
+                  </div>   
+              </div>
+              
+              <iframe class="w-100 pb-3" height="480" src="https://www.google.com/maps/d/u/0/embed?mid=1_GQO0GniVmeL36I-EFOU2oP6hg7D2PHh&ehbc=2E312F&z=13"></iframe>   
+
+              <p>
+                  <a class="btn btn-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#mapa" role="button" aria-expanded="false" aria-controls="mapa">Fechar mapa</a>
+              </p>       
+          </div>
+        </div>
+      </div>
+
+      <!-- Poco -->
+      <div class="container collapse pb-3" id="poco">
+        <div class="card card-body">
+          <p>Em desenvolvimento...</p>
+
+          <p>
+              <a class="btn btn-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#poco" role="button" aria-expanded="false" aria-controls="poco">Fechar pesquisa</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container-fluid marketing" style="background-color: #9dc2d1;">
+      
+      <br>
+      <div class="row featurette mx-2 my-5 flex-wrap-reverse">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Sobre o projeto</h2>
+          <p class="lead">A ausência de água de boa qualidade afeta as condições de vida e a saúde das comunidades. Sabe-se que grande parte dos problemas decorrentes da má gestão dos recursos hídricos podem ser minimizados por companhas de educação ambiental na comunidade com foco na formação de cidadãos críticos e por análises periódicas da qualidade microbiológica da água ofertada, enfatizando a importância do consumo de uma água livre de contaminantes, bem como, fortalecendo o papel socioambiental dos sujeitos frente a percepção das ações antrópicas que comprometem a qualidade dessas águas. Somado a esses papeis os gestores dos municípios por meio das diversas secretarias municipais também precisam estar cientes das suas obrigações na distribuição de uma água de boa qualidade.</p>
+        </div>
+        <div class="col text-center py-2">
+          <img class="img-fluid rounded" src="./imgs/poco1.jpg">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mx-2 my-5">
+        <div class="col text-center py-2">
+          <img class="img-fluid rounded" src="./imgs/esgoto.png">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">A água como veículo de transmissão de doenças</h2>
+          <p class="lead">A má qualidade dos recursos hídricos está diretamente associada a ocorrência de doenças, uma vez que, além da água ser um veículo de transmissão de agentes patológicos como protozoários, helmintos, bactérias e vírus, pode ser fonte de contaminação por produtos químicos (GUEDES et al., 2017). Portanto, “o desenvolvimento dos recursos hídricos não pode se desassociar da conservação ambiental, já que na essência envolve a sustentabilidade do homem no meio natural” (TUNDISI, 2003).</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mx-2 my-5 flex-wrap-reverse">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Sustentabilidade hídrica e análises microbiológicas</h2>
+          <p class="lead">O uso racional da água é atitude fundamental para o seu melhor aproveitamento, principalmente, levando-se em consideração que a região Nordestina Brasileira apresenta índices pluviométricos irregulares e, consequentemente, períodos de escassez de água (BRAGA, et al. 2005 apud FREIRE et al, 2015).O planejamento da utilização racional da água de fontes naturais deve levar em consideração a qualidade da água na perspectiva da saúde, garantindo que os consumidores não sejam expostos a patógenos que causam doenças (SADEGHI et al., 2006). Ademais, “nas regiões tropicais, a contaminação da água dos mananciais tende a aumentar na estação chuvosa devido, principalmente, à água de escoamento superficial” (NAUMOVA, 2006). O baixo índice de chuvas também interfere na qualidade e a quantidade de água consumida pela população, por meio do aumento de nutrientes orgânicos nos mananciais, causando eventos de eutrofização dos corpos hídricos, tais cenários podem ser decisivos no surgimento de problemas de saúde (GRIGOLETTO et al., 2016).</p>
+        </div>
+        <div class="col text-center py-2">
+          <img class="img-fluid rounded" src="./imgs/analise.png">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mx-2 my-5">
+        <div class="col text-center py-2">
+          <img class="img-fluid rounded" src="./imgs/aula.jpg">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Educação como agente de transformador da qualidade hídrica</h2>
+          <p class="lead">A conscientização da população que consome a água em seus domicílios e nas suas atividades diárias é de suma importância para geração de cidadãos participativos com envolvimento nas ações de preservação dos recursos hídricos, por meio do consumo consciente e da preservação do meio ambiente (TEIXEIRA; MOURA; COELHO, 2016). Além disso, a população instruída pode atuar como multiplicadores na divulgação de ações que diminuam o desperdício e a contaminação das fontes de água utilizadas para o abastecimento humano, enfatizando a importância do monitoramento da qualidade microbiológica da água, uma vez que, ela pode atuar como veículo de transmissão de doenças, comprometendo a qualidade de vida da população e onerando os sistemas de saúde dos municípios. Neste contexto, o cidadão comum também deve ser educado e orientado a cobrar dos principais responsáveis o devido cuidado com os recursos ambientais (PADILHA et al, 2019).</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="container marketing">
+        <div class="row d-flex justify-content-center align-items-center">
+
+          <div class="row">
+            <h2 class="featurette-heading text-center pb-5">Equipe de servidores e alunos</h2>
+          </div>
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_paula.png" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Paula Ivani</h5>
+            <p>Prof. de Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_cinthia.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Cinthia Telles</h5>
+            <p>Prof. de Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto1.jpg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Guilherme Leal</h5>
+            <p>Prof. de Sistemas de Informação - IFRN/MC</p>
+          </div> 
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_martina.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Martina Martins</h5>
+            <p>Téc. em Laboratório - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto1.jpg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Sara Lima</h5>
+            <p>Téc. em Laboratório - IFRN/LAJ</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_anderson.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Anderson Alves</h5>
+            <p>Aluno - Técnico em Química - IFRN/MC</p>
+          </div> 
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_jadna.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Jadna Caroline</h5>
+            <p>Aluna - Licenciatura em Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_fabio.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Fábio Pereira</h5>
+            <p>Aluno - Licenciatura em Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <img src="./imgs/foto_kaio.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;">
+            <h5 class="pt-1">Kaio Araújo</h5>
+            <p>Aluno - Licenciatura em Biologia - IFRN/MC</p>
+          </div>  
+
+
+        </div>
+      </div>
+
+  </div>
+
+</main>
+
+<footer class="px-5 py-5" style="background-color: #246084;">
+  <div class="row d-flex justify-content-center align-items-center">
+    
+    <div class="col text-center pb-3">
+        <img src="./imgs/ifrn.png" style="width: 300px;">
+    </div>
+
+    <div class="col">
+      <h5 class="fw-bold">Núcleo de Extensão e Prática Profissional</h5>  
+      <p>
+        Rua das Margaridas, 300, COHAB <br>
+        CEP 59.500-000 <br>
+        Macau-RN
+      </p>
+    </div>
+  </div>
+</footer>
+      
+</body>
+</html>
