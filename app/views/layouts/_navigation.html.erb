@@ -1,0 +1,49 @@
+<header>
+
+  <div class="collapse" id="navbarHeader" style="background-color: #368bb5;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="font-weight-bold">Sobre</h4>
+          <p class="text-white"><em>Projeto desenvolvido como ação do Núcleo de Extensão e Prática e Profissional (NEPP) do IFRN - Campus Macau. Informações são disponibilizadas para a população de Macau acerca da importância da avaliação da qualidade dos corpos hídricos e do consumo consciente da água de abastecimento humano como medida de promoção a saúde.</em></p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="font-weight-bold">Contato</h4>
+          <ul class="list-unstyled">
+            <li>
+                <%= image_tag("instagram.svg", size: "30x24", :class => "img-fluid d-inline-block align-text-top m-2") %>
+                <%# <img src="./imgs/instagram.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> %>
+                <a href="https://www.instagram.com/ama_pocossaudaveis_nepp.mc/" class="text-white">
+                  Siga-nos no Instagram
+                </a>
+              </li>
+            <li>
+                <%= image_tag("email.svg", size: "30x24", :class => "img-fluid d-inline-block align-text-top m-2") %>
+                <%# <img src="./imgs/email.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> %>
+                <a href="mailto:ama.pocossaudaveis@ifrn.edu.br" class="text-white">
+                  Enviar e-mail
+                </a>
+            </li>
+            <li>
+                <%= image_tag("admin.svg", size: "30x24", :class => "img-fluid d-inline-block align-text-top m-2") %>
+                <%# <img src="./imgs/admin.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> %>
+                <a href="#" class="text-white">
+                  Login
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark shadow-sm" style="background-color: #246084;">
+    <div class="container">
+      
+      <%= link_to "AMA - Poços Saudáveis", root_path, class:"navbar-brand d-flex align-items-center fw-bold" %>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>

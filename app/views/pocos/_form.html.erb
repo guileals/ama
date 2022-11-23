@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+
+    <%= form_with(model: poco) do |form| %>
+      
+      <% if poco.errors.any? %>
+        <div style="color: red">
+          <ul>
+            <% poco.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group my-2">
+        <%= form.label "Endereço:", style: "display: block" %>
+        <%= form.text_field :endereco, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Complemento:", style: "display: block" %>
+        <%= form.text_field :complemento, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Cidade:", style: "display: block" %>
+        <%= form.text_field :cidade, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Estado:", style: "display: block" %>
+        <%= form.text_field :estado, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Telefone:", style: "display: block" %>
+        <%= form.text_field :telefone, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Latitude:", style: "display: block" %>
+        <%= form.text_field :lat, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Longitude:", style: "display: block" %>
+        <%= form.text_field :long, class: "form-control" %>
+      </div>
+
+      <div class="form-group my-2">
+        <%= form.label "Resultado:", style: "display: inline", class: "me-2" %>
+        <%# <%= form.check_box :res, class: "form-check" %>
+        <%= form.radio_button :res, true, checked: !!@poco.res %>
+        <%= form.label :res, "Própria", value: "true", class: "me-2 fw-bold" %>
+        <%= form.radio_button :res, false %>
+        <%= form.label :res, "Imprópria", value: "false", class: "me-2 fw-bold" %>
+      </div>
+
+      <div class="col text-center my-4">
+        <%= form.submit "Cadastrar", class:"btn btn-success my-4"%>
+        <%= link_to "Voltar", pocos_path, class:"btn btn-secondary px-4" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,197 @@
+<main>
+
+  <!-- style="background-image: linear-gradient(white, white, white, #9dc2d1);" -->
+  <section class="text-center container">
+    <div class="row pt-5 mb-5 d-flex justify-content-center align-items-center">
+      <div class="col">
+        <%= image_tag("AMA2.png", width: "350", :class => "pb-3") %>
+        <%# <img src="./imgs/AMA2.png" style="width: 350px;" class="pb-3"> %>
+      </div>
+      <!-- d-flex justify-content-center align-items-center -->
+      <div class="col text-center">
+        <h1 class="fw-normal">Análise Microbiológica da Água</h1>
+        <p class="lead text-muted">Verifique aqui a avaliação da qualidade microbiológica das águas utilizadas para o consumo humano pela população de Macau-RN.</p>
+        <p>
+          <%= link_to "Visualizar poços", pocos_path, class:"btn btn-outline-secondary btn-lg" %>
+          <!-- <a class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#mapa" role="button" aria-expanded="false" aria-controls="mapa">Visualizar poços</a> %> -->
+          <!-- <a class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#poco" role="button" aria-expanded="false" aria-controls="poco">Pesquisar poços</a> -->
+        </p>
+      </div>
+
+      <!-- Mapa -->
+      <div class="container collapse pb-3" id="mapa">
+        <div class="card card-body">
+          <div class="row">
+              <h1 class="fw-normal mb-3">Clique nas marcações do mapa para obter informações.</h1>
+              <div class="row d-flex justify-content-center">
+                  <div class="col">
+                    <%= image_tag("pocos_s.png", width: "30") %>
+                    <%# <img src="./imgs/pocos_s.png" alt="" width="30"> %>
+                    <p class="lead px-1">Poços Saudáveis</p>
+                  </div>   
+                  <div class="col">
+                    <%= image_tag("pocos_c.png", width: "30") %>
+                    <%# <img src="./imgs/pocos_c.png" alt="" width="30"> %>
+                    <p class="lead px-1">Poços Contaminados</p>
+                  </div>   
+              </div>
+              
+              <iframe class="w-100 pb-3" height="480" src="https://www.google.com/maps/d/u/0/embed?mid=1_GQO0GniVmeL36I-EFOU2oP6hg7D2PHh&ehbc=2E312F&z=13"></iframe>   
+
+              <p>
+                  <a class="btn btn-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#mapa" role="button" aria-expanded="false" aria-controls="mapa">Fechar mapa</a>
+              </p>       
+          </div>
+        </div>
+      </div>
+
+      <!-- Poco -->
+      <div class="container collapse pb-3" id="poco">
+        <div class="card card-body">
+          <p>Em desenvolvimento...</p>
+
+          <p>
+              <a class="btn btn-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#poco" role="button" aria-expanded="false" aria-controls="poco">Fechar pesquisa</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE O PROJETO -->
+  <section style="background-color: #9dc2d1;">
+    <div class="container marketing text-center">
+      <br>
+        <div class="row featurette justify-content-center mx-5 my-5 flex-wrap-reverse">
+            <div class="col-md-8">
+                <h2 class="featurette-heading">Sobre o projeto</h2>
+                <p class="lead">A ausência de água de boa qualidade afeta as condições de vida e a saúde das comunidades. Sabe-se que grande parte dos problemas decorrentes da má gestão dos recursos hídricos podem ser minimizados por companhas de educação ambiental na comunidade com foco na formação de cidadãos críticos e por análises periódicas da qualidade microbiológica da água ofertada, enfatizando a importância do consumo de uma água livre de contaminantes, bem como, fortalecendo o papel socioambiental dos sujeitos frente a percepção das ações antrópicas que comprometem a qualidade dessas águas. Somado a esses papeis os gestores dos municípios por meio das diversas secretarias municipais também precisam estar cientes das suas obrigações na distribuição de uma água de boa qualidade.</p>
+            </div>
+            <div class="col align-items-center py-2">
+                <%= image_tag("poco1.jpg", :class => "img-fluid rounded") %>
+                <%# <img class="img-fluid rounded" src="./imgs/poco1.jpg"> %>
+            </div>
+        </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mx-2 my-5">
+        <div class="col text-center py-2">
+            <%= image_tag("esgoto.png", :class => "img-fluid rounded") %>
+            <%# <img class="img-fluid rounded" src="./imgs/esgoto.png"> %>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">A água como veículo de transmissão de doenças</h2>
+          <p class="lead">A má qualidade dos recursos hídricos está diretamente associada a ocorrência de doenças, uma vez que, além da água ser um veículo de transmissão de agentes patológicos como protozoários, helmintos, bactérias e vírus, pode ser fonte de contaminação por produtos químicos (GUEDES et al., 2017). Portanto, “o desenvolvimento dos recursos hídricos não pode se desassociar da conservação ambiental, já que na essência envolve a sustentabilidade do homem no meio natural” (TUNDISI, 2003).</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mx-2 my-5 flex-wrap-reverse">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Sustentabilidade hídrica e análises microbiológicas</h2>
+          <p class="lead">O uso racional da água é atitude fundamental para o seu melhor aproveitamento, principalmente, levando-se em consideração que a região Nordestina Brasileira apresenta índices pluviométricos irregulares e, consequentemente, períodos de escassez de água (BRAGA, et al. 2005 apud FREIRE et al, 2015).O planejamento da utilização racional da água de fontes naturais deve levar em consideração a qualidade da água na perspectiva da saúde, garantindo que os consumidores não sejam expostos a patógenos que causam doenças (SADEGHI et al., 2006). Ademais, “nas regiões tropicais, a contaminação da água dos mananciais tende a aumentar na estação chuvosa devido, principalmente, à água de escoamento superficial” (NAUMOVA, 2006). O baixo índice de chuvas também interfere na qualidade e a quantidade de água consumida pela população, por meio do aumento de nutrientes orgânicos nos mananciais, causando eventos de eutrofização dos corpos hídricos, tais cenários podem ser decisivos no surgimento de problemas de saúde (GRIGOLETTO et al., 2016).</p>
+        </div>
+        <div class="col text-center py-2">
+            <%= image_tag("analise.png", :class => "img-fluid rounded") %>
+            <%# <img class="img-fluid rounded" src="./imgs/analise.png"> %>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mx-2 my-5">
+        <div class="col text-center py-2">
+            <%= image_tag("aula.jpg", :class => "img-fluid rounded") %>
+            <%# <img class="img-fluid rounded" src="./imgs/aula.jpg"> %>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Educação como agente de transformador da qualidade hídrica</h2>
+          <p class="lead">A conscientização da população que consome a água em seus domicílios e nas suas atividades diárias é de suma importância para geração de cidadãos participativos com envolvimento nas ações de preservação dos recursos hídricos, por meio do consumo consciente e da preservação do meio ambiente (TEIXEIRA; MOURA; COELHO, 2016). Além disso, a população instruída pode atuar como multiplicadores na divulgação de ações que diminuam o desperdício e a contaminação das fontes de água utilizadas para o abastecimento humano, enfatizando a importância do monitoramento da qualidade microbiológica da água, uma vez que, ela pode atuar como veículo de transmissão de doenças, comprometendo a qualidade de vida da população e onerando os sistemas de saúde dos municípios. Neste contexto, o cidadão comum também deve ser educado e orientado a cobrar dos principais responsáveis o devido cuidado com os recursos ambientais (PADILHA et al, 2019).</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="container marketing">
+        <div class="row d-flex justify-content-center align-items-center">
+
+          <div class="row">
+            <h2 class="featurette-heading text-center pb-5">Equipe de servidores e alunos</h2>
+          </div>
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_paula.png", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_paula.png" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Paula Ivani</h5>
+            <p>Prof. de Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_cinthia.jpeg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_cinthia.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Cinthia Telles</h5>
+            <p>Prof. de Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto1.jpg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto1.jpg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Guilherme Leal</h5>
+            <p>Prof. de Sistemas de Informação - IFRN/MC</p>
+          </div> 
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_martina.jpeg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_martina.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Martina Martins</h5>
+            <p>Téc. em Laboratório - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_paula.png", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto1.jpg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Sara Lima</h5>
+            <p>Téc. em Laboratório - IFRN/LAJ</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_anderson.jpeg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_anderson.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Anderson Alves</h5>
+            <p>Aluno - Técnico em Química - IFRN/MC</p>
+          </div> 
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_jadna.jpeg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_jadna.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Jadna Caroline</h5>
+            <p>Aluna - Licenciatura em Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_fabio.jpeg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_fabio.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Fábio Pereira</h5>
+            <p>Aluno - Licenciatura em Biologia - IFRN/MC</p>
+          </div>  
+
+          <div class="col-lg-4  text-center pb-3">
+            <%= image_tag("foto_kaio.jpeg", width: "200", :class => "img-thumbnail rounded") %>
+            <%# <img src="./imgs/foto_kaio.jpeg" class="img-thumbnail rounded" alt="" style="width: 200px;"> %>
+            <h5 class="pt-1">Kaio Araújo</h5>
+            <p>Aluno - Licenciatura em Biologia - IFRN/MC</p>
+          </div>  
+
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</main>

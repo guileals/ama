@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+
+    <h1 class="text-center my-4 fw-bold">Lista de Poços</h1>
+
+    <div>
+      <table class="table table-hover text-center">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Complemento</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Latitude</th>
+            <th scope="col">Longitude</th>
+            <th scope="col">Resultado</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @pocos.each do |poco| %>  
+            <tr>            
+              <th scope="row"><%= poco.id %></th>
+              <td><%= poco.endereco %></td>
+              <td><%= poco.complemento %></td>
+              <td><%= poco.cidade %></td>
+              <td><%= poco.estado %></td>
+              <td><%= poco.telefone %></td>
+              <td><%= poco.lat %></td>
+              <td><%= poco.long %></td>
+              <td>
+                <% if(poco.res) %>
+                  <p class="res-p fw-bold">Própria</p>
+                <% else %>  
+                  <p class="res-imp fw-bold">Imprópria</p>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to "Exibir", poco, class:"btn btn-outline-secondary" %>
+                <%= link_to "Editar", edit_poco_path(poco), class:"btn btn-primary" %>
+                <%= link_to "Excluir", poco_path(poco), class:"btn btn-danger", data: {turbo_confirm: "Tem certeza?", turbo_method: :delete} %>
+              </td>
+            </tr>
+          <% end %>
+          
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class="col-4 text-center">
+      <%= link_to "Novo poço", new_poco_path, class:"btn btn-success my-4" %>
+    </div>
+
+  </div>
+</div>

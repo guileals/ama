@@ -1,0 +1,54 @@
+<h2 class="text-center my-4">Poço <%= poco.id %></h2>
+
+<div class="container">
+  <div class="row justify-content-center align-items-center">    
+    <div class="col text-center">
+      <div class="container mb-4" data-controller="map" data-target="map.placeholder" style="height: 400px; width: 400px;"></div>
+    </div>
+
+    <div id="<%= dom_id poco %>" class="col text-center">
+      <p>
+        <strong>Endereco:</strong>
+        <%= poco.endereco %>
+      </p>
+
+      <p>
+        <strong>Complemento:</strong>
+        <%= poco.complemento %>
+      </p>
+
+      <p>
+        <strong>Cidade:</strong>
+        <%= poco.cidade %>
+      </p>
+
+      <p>
+        <strong>Estado:</strong>
+        <%= poco.estado %>
+      </p>
+
+      <p>
+        <strong>Telefone:</strong>
+        <%= poco.telefone %>
+      </p>
+
+      <p>
+        <strong>Lat:</strong>
+        <%= poco.lat %>
+      </p>
+
+      <p>
+        <strong>Long:</strong>
+        <%= poco.long %>
+      </p>
+
+      <strong>Resultado:     
+      <% if (poco.res) %>
+        <p style="color: green">Própria</p>
+      <% else %>
+        <p style="color: red">Imprópria</p>
+      <% end %>
+      </strong>   
+    </div>
+  </div>
+</div>
