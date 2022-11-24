@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row justify-content-center align-items-center">    
     <div class="col text-center">
-      <div class="container mb-4" data-controller="map" data-target="map.placeholder" style="height: 400px; width: 400px;"></div>
+      <a href="https://maps.google.com/?q=<%= poco.lat %>,<%= poco.long %>"><div class="container mb-4" data-controller="map" data-target="map.placeholder" style="height: 400px; width: 400px;"></div></a>
     </div>
 
     <div id="<%= dom_id poco %>" class="col text-center">

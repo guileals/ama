@@ -23,7 +23,7 @@
         <tbody>
           <% @pocos.each do |poco| %>  
             <tr>            
-              <th scope="row"><%= poco.id %></th>
+              <td><%= poco.id %></th>
               <td><%= poco.endereco %></td>
               <td><%= poco.complemento %></td>
               <td><%= poco.cidade %></td>
@@ -40,8 +40,10 @@
               </td>
               <td>
                 <%= link_to "Exibir", poco, class:"btn btn-outline-secondary" %>
-                <%= link_to "Editar", edit_poco_path(poco), class:"btn btn-primary" %>
-                <%= link_to "Excluir", poco_path(poco), class:"btn btn-danger", data: {turbo_confirm: "Tem certeza?", turbo_method: :delete} %>
+                <% if logged_in? %>
+                  <%= link_to "Editar", edit_poco_path(poco), class:"btn btn-primary" %>
+                  <%= link_to "Excluir", poco_path(poco), class:"btn btn-danger", data: {turbo_confirm: "Tem certeza?", turbo_method: :delete} %>
+                <% end %>
               </td>
             </tr>
           <% end %>
@@ -51,9 +53,11 @@
       </table>
     </div>
 
-    <div class="col-4 text-center">
-      <%= link_to "Novo poço", new_poco_path, class:"btn btn-success my-4" %>
-    </div>
+    <% if logged_in? %>
+      <div class="col-4 text-center">
+        <%= link_to "Novo poço", new_poco_path, class:"btn btn-success my-4" %>
+      </div>
+    <% end %>
 
   </div>
 </div>

@@ -58,7 +58,9 @@
       </div>
 
       <div class="col text-center my-4">
-        <%= form.submit "Cadastrar", class:"btn btn-success my-4"%>
+        <% if logged_in? %>
+          <%= form.submit "Cadastrar", class:"btn btn-success my-4"%>
+        <% end %>
         <%= link_to "Voltar", pocos_path, class:"btn btn-secondary px-4" %>
       </div>
     <% end %>

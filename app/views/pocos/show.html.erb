@@ -4,8 +4,10 @@
     <%= render @poco %>
 
     <div class="col text-center my-4">
-      <%= link_to "Editar", edit_poco_path(@poco), class:"btn btn-primary" %>
-      <%= link_to "Excluir", poco_path(@poco), class:"btn btn-danger", data: {turbo_confirm: "Tem certeza?", turbo_method: :delete} %>
+      <% if logged_in? %>
+        <%= link_to "Editar", edit_poco_path(@poco), class:"btn btn-primary" %>
+        <%= link_to "Excluir", poco_path(@poco), class:"btn btn-danger", data: {turbo_confirm: "Tem certeza?", turbo_method: :delete} %>
+      <% end %>
       <%= link_to "Voltar", pocos_path, class:"btn btn-secondary" %>
     </div>
 

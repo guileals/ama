@@ -27,9 +27,8 @@
             <li>
                 <%= image_tag("admin.svg", size: "30x24", :class => "img-fluid d-inline-block align-text-top m-2") %>
                 <%# <img src="./imgs/admin.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> %>
-                <a href="#" class="text-white">
-                  Login
-                </a>
+                <%# <a href="#" class="text-white">Login</a> %>
+                <%= link_to "Login", login_path, class:"text-white" %>
             </li>
           </ul>
         </div>
@@ -40,6 +39,23 @@
     <div class="container">
       
       <%= link_to "AMA - Poços Saudáveis", root_path, class:"navbar-brand d-flex align-items-center fw-bold" %>
+
+
+      <% if logged_in? %>
+        <div class="col align-items-center justify-content-center fw-bold">
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <%= image_tag("admin.svg", size: "30x24", :class => "") %>
+                    [<%= current_user.username %>]
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <%= link_to "Sair", logout_path, class: "nav-link", data: {turbo_confirm: "Quer fazer log out?", turbo_method: :delete} %>
+                </ul>
+          </li>    
+
+
+        </div>
+      <% end %>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

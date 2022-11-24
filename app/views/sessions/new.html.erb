@@ -1,0 +1,32 @@
+<h1 class="text-center mt-4">Entrar no AMA</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+  
+      <%= form_with(scope: :session, url: login_path, class: "shadow p-3 mb-5 bg-secondary bg-gradient rounded", local: true) do |f| %>
+
+        <div class="form-group row">
+          <%= f.label "E-mail:", class: "col-2 col-form-label text-light"%>
+          <div class="col-10 mb-3">
+            <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "Digite o seu e-mail" %> 
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label "Senha:", class: "col-2 col-form-label text-light"%>
+          <div class="col-10 mb-3">
+            <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Digite sua senha" %> 
+          </div>
+        </div>
+
+        <div class="col text-center my-4">
+          <%= f.submit "Entrar", class:"btn btn-success my-4 px-4"%>
+          <%= link_to "Voltar", pocos_path, class:"btn btn-danger px-4" %>
+        </div>
+
+      <% end %>
+      </div>
+
+  </div>
+</div>
