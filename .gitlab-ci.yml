@@ -13,7 +13,8 @@ stages:
     policy: pull
   before_script:
     - gem install bundler --no-document
-    - bundle install --jobs $(nproc) "${FLAGS[@]}" --path=vendor
+    - bundle check || bundle install --jobs $(nproc)
+    # - bundle install --jobs $(nproc) "${FLAGS[@]}" --path=vendor
 
 .db:
   extends: .build
