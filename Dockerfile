@@ -12,8 +12,8 @@ ENV PORT=3000
 ADD Gemfile* /app/
 RUN bundle install
 
-ADD package.json yarn.lock /app/
-RUN yarn install
+# ADD package.json yarn.lock /app/
+# RUN yarn install
 
 ADD . /app/
 
